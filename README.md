@@ -1,2 +1,2 @@
-# smoothly-model
-Data model for Smoothly.
+# ctpsp3-model
+Data models for CtPsp3.
