@@ -13,12 +13,22 @@ export namespace Address {
 				value.countryCode == "SE" && AddressSE.is(value)
 			)
 	}
+	export function create(countryCode: CountryCode.Alpha2): Address {
+		let result: Address
+		switch (countryCode) {
+			case "FI": result = AddressFI.create(); break
+			default: case "SE": result = AddressSE.create(); break
+		}
+		return result
+	}
 	export type SE = AddressSE
 	export namespace SE {
 		export const is = AddressSE.is
+		export const create = AddressSE.create
 	}
 	export type FI = AddressFI
 	export namespace FI {
 		export const is = AddressFI.is
+		export const create = AddressFI.create
 	}
 }

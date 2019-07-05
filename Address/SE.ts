@@ -12,4 +12,7 @@ export namespace SE {
 			typeof(value.city) == "string" &&
 			value.countryCode == "SE"
 	}
+	export function create(): SE {
+		return { countryCode: "SE", street: "", zipCode: "", city: "" }
+	}
 }
