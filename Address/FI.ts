@@ -13,6 +13,6 @@ export namespace FI {
 			value.countryCode == "FI"
 	}
 	export function create(): FI {
-		return { countryCode: "FI", street: "", zipCode: "", city: ""}
+		return { street: "", zipCode: "", city: "", countryCode: "FI" }
 	}
 }

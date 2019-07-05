@@ -13,6 +13,6 @@ export namespace SE {
 			value.countryCode == "SE"
 	}
 	export function create(): SE {
-		return { countryCode: "SE", street: "", zipCode: "", city: "" }
+		return { street: "", zipCode: "", city: "", countryCode: "SE" }
 	}
 }

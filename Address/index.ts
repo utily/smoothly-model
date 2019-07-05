@@ -21,14 +21,14 @@ export namespace Address {
 		}
 		return result
 	}
-	export type SE = AddressSE
-	export namespace SE {
-		export const is = AddressSE.is
-		export const create = AddressSE.create
-	}
 	export type FI = AddressFI
 	export namespace FI {
 		export const is = AddressFI.is
 		export const create = AddressFI.create
+	}
+	export type SE = AddressSE
+	export namespace SE {
+		export const is = AddressSE.is
+		export const create = AddressSE.create
 	}
 }
