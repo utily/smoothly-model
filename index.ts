@@ -10,6 +10,7 @@ import { Message } from "./Message"
 import { Name } from "./Name"
 import { PhoneNumbers } from "./PhoneNumbers"
 import { Trigger } from "./Trigger"
+import { Notice } from "./Notice"
 
 export {
 	Address,
@@ -24,4 +25,5 @@ export {
 	Name,
 	PhoneNumbers,
 	Trigger,
+	Notice,
 }
