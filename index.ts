@@ -1,5 +1,6 @@
 import { Address } from "./Address"
 import { Addresses } from "./Addresses"
+import { ClientIdentifier } from "./ClientIdentifier"
 import { Color } from "./Color"
 import { Contact } from "./Contact"
 import { EmailAddresses } from "./EmailAddresses"
@@ -15,6 +16,7 @@ import { Notice } from "./Notice"
 export {
 	Address,
 	Addresses,
+	ClientIdentifier,
 	Color,
 	Contact,
 	EmailAddresses,
