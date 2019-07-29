@@ -2,15 +2,13 @@ import { Identifier } from "authly"
 
 export abstract class ClientIdentifier {
 	private constructor() {}
-	static set id(id: string) {
-		ClientIdentifier.id = id
-	}
-	static get id(): string {
-		ClientIdentifier.id = localStorage.getItem("clientId")
-		if (!ClientIdentifier.id) {
-			ClientIdentifier.id = Identifier.generate(10)
-			localStorage.setItem("clientId", ClientIdentifier.id)
+	private static value: string
+	get value(): string {
+		ClientIdentifier.value = localStorage.getItem("clientIdentifier")
+		if (!ClientIdentifier.value) {
+			ClientIdentifier.value = Identifier.generate(10)
+			localStorage.setItem("clientIdentifier", ClientIdentifier.value)
 		}
-		return ClientIdentifier.id
+		return ClientIdentifier.value
 	}
 }
