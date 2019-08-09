@@ -45,12 +45,12 @@
  },
  "dependencies": {
   "isoly": "0.0.10",
-  "authly": "0.0.23"
+  "authly": "0.0.26"
  },
  "devDependencies": {
-  "@types/jest": "^24.0.15",
-  "@types/node": "^12.6.2",
-  "@types/node-fetch": "^2.3.7",
+  "@types/jest": "^24.0.17",
+  "@types/node": "^12.7.1",
+  "@types/node-fetch": "^2.5.0",
   "babel-core": "^6.26.3",
   "babel-jest": "^24.8.0",
   "jest": "^24",
