@@ -6,7 +6,7 @@ export abstract class ClientIdentifier {
 	static get value(): string {
 		ClientIdentifier.valueCache = localStorage.getItem("clientIdentifier") || undefined
 		if (!ClientIdentifier.valueCache) {
-			ClientIdentifier.valueCache = Identifier.generate(10)
+			ClientIdentifier.valueCache = Identifier.generate(12)
 			localStorage.setItem("clientIdentifier", ClientIdentifier.valueCache)
 		}
 		return ClientIdentifier.valueCache
