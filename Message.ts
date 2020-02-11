@@ -11,14 +11,12 @@ export class Message<T> {
 	static send(message: Message<any>, context?: Window): void
 	static send(destination: string, content: any, context?: Window): void
 	static send(message: string | Message<any>, content?: any | Window, context?: Window): void {
-		console.log("message.send", { message, content, context })
 		if (Message.is(message) && context == undefined) {
 			context = content as Window
 			if (!context)
 				context = window
 			const destination = message.destination.split("#", 2)
 			message = { destination: destination[1], content: message.content }
-			console.log("postMessage", message, destination[0])
 			context.postMessage(message, destination[0])
 		} else if (typeof(context) != "string") {
 			if (!context)
@@ -35,7 +33,6 @@ export class Message<T> {
 			destination = splitted[1]
 		}
 		(context || window).addEventListener("message", (e: MessageEvent) => {
-			console.log("message.listen callback", origin, { message: e.data, origin: e.origin })
 			const message = e.data
 			if (Message.is(message) && (origin == "*" || e.origin == origin) && (destination == "" || message.destination == destination))
 				handle(message.destination, message.content)
