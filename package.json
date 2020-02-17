@@ -52,19 +52,19 @@
   "clean": "rm -rf dist node_modules coverage"
  },
  "dependencies": {
-  "isoly": "0.0.10",
-  "authly": "0.0.26"
+  "isoly": "0.0.11",
+  "authly": "0.0.34"
  },
  "devDependencies": {
-  "@types/jest": "^24.0.17",
-  "@types/node": "^12.7.1",
-  "@types/node-fetch": "^2.5.0",
+  "@types/jest": "^25.1.2",
+  "@types/node": "^13.7.1",
+  "@types/node-fetch": "^2.5.4",
   "babel-core": "^6.26.3",
-  "babel-jest": "^24.8.0",
-  "jest": "^24",
-  "ts-jest": "^24.0.2",
-  "tslint": "^5.18.0",
-  "typescript": "^3.5.3",
-	"watch": "^1.0.2"
+  "babel-jest": "^25.1.0",
+  "jest": "^25",
+  "ts-jest": "^25.2.0",
+  "tslint": "^6.0.0",
+  "typescript": "^3.7.5",
+  "watch": "^1.0.2"
  }
 }
