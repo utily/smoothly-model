@@ -17,14 +17,16 @@ export interface Contact {
 }
 export namespace Customer {
 	export function is(value: any | Contact): value is Contact {
-		return typeof(value) == "object" &&
+		return (
+			typeof value == "object" &&
 			(value.type == "organization" || value.type == "person") &&
 			(IdentityNumber.is(value.identityNumber) || value.identityNumber == undefined) &&
-			(typeof(value.id) == "string") &&
-			(typeof(value.number) == "string" || value.number == undefined) &&
-			(typeof(value.name) == "string" || Name.is(value.name)) &&
+			typeof value.id == "string" &&
+			(typeof value.number == "string" || value.number == undefined) &&
+			(typeof value.name == "string" || Name.is(value.name)) &&
 			(Address.is(value.address) || Addresses.is(value.address)) &&
-			(typeof(value.email) == "string" || EmailAddresses.is(value.email) || value.email == undefined) &&
-			(typeof(value.phone) == "string" || PhoneNumbers.is(value.phone) || value.phone == undefined)
+			(typeof value.email == "string" || EmailAddresses.is(value.email) || value.email == undefined) &&
+			(typeof value.phone == "string" || PhoneNumbers.is(value.phone) || value.phone == undefined)
+		)
 	}
 }

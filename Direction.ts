@@ -1,4 +1,1 @@
-export type Direction =
-	"forward" |
-	"backward" |
-	"none"
+export type Direction = "forward" | "backward" | "none"
